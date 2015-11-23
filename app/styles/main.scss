@@ -713,6 +713,12 @@ html.full-screen {
             padding-top: 8px;
             .thumbnail {
                 margin-bottom: 8px;
+                a {
+                    text-decoration: none;
+                }
+                &.selected {
+                    border: 1px solid #5674b9;
+                }
                 .caption {
                     padding: 3px;
                 }
