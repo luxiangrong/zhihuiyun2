@@ -225,7 +225,10 @@ html.full-screen {
 .grid {
     margin-left: -8px;
     margin-right: -8px;
+    margin-top: -8px;
     .grid-item {
+        transition: transform 0.5s;
+        transform: rotateY(0deg);
         a {
             color: #fff;
             text-align: center;
@@ -233,11 +236,27 @@ html.full-screen {
             width: 100%;
             height: 100%;
             top: 50%;
-            margin-top: -0.75rem;
-            font-size: 1.5rem;
+            margin-top: -16px;
             text-decoration: none;
-            .fliped {
+            span {
+                position: relative;
+                top:5px;
+                vertical-align: middle;
+            }
+            img {
+                transform: rotateY(180deg);
                 display: none;
+            }
+        }
+        &.flip {
+            transform: rotateY(180deg);
+            a {
+                span {
+                    display: none;
+                }
+                img {
+                    display: inline-block;
+                }
             }
         }
         &.grid-item-1 {
