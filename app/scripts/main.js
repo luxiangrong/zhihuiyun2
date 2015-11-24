@@ -9,6 +9,16 @@
             $('.side-nav-wrap').toggleClass('active');
         });
 
+        $(document).on('click', '.side-nav-wrap.active', function(e){
+            $('.side-nav-wrap').toggleClass('active');
+        });
+
+        $('.side-nav a').on('click', function(e){
+            e.stopPropagation();
+        });
+        
+
+
         $('input').iCheck({
             checkboxClass: 'iradio_square-grey',
             radioClass: 'iradio_square-grey',
