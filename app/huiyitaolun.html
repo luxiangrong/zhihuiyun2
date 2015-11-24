@@ -162,9 +162,27 @@
                     </div>
                 </div>
             </div>
-            <a href="" class="btn btn-blue btn-fix-bottom">发表话题</a>
+            <a href="" class="btn btn-blue btn-fix-bottom btn-topic">发表话题</a>
         </div>
     </section>
+    <div class="topic-modal">
+        <div class="dialog">
+            <div class="topic">
+                <input class="form-control" type="text" placeholder="主题：">
+            </div>
+            <div class="content">
+                <textarea class="form-control" name="" id="" cols="30" rows="6"></textarea>
+            </div>
+            <div class="button-groups row">
+                <div class="col-xs-6 col-btn-l">
+                    <button class="btn btn-link btn-block btn-b">取消</button>
+                </div>
+                <div class="col-xs-6 col-btn-r">
+                    <button class="btn btn-link btn-block btn-b">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
@@ -188,6 +206,16 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+    <script>
+    (function($) {
+        $(document).ready(function() {
+            $('.btn-topic').on('click', function(e) {
+                e.preventDefault();
+                $('.topic-modal').show();
+            });
+        });
+    })(jQuery);
+    </script>
 </body>
 
 </html>

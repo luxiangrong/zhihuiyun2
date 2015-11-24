@@ -207,7 +207,7 @@ module.exports = function (grunt) {
     wiredep: {
       app: {
         src: ['<%= config.app %>/*.html'],
-        exclude: ['bootstrap.js'],
+        exclude: ['bootstrap.js', 'bootstrap-dialog.min.js'],
         ignorePath: /^(\.\.\/)*\.\./
       },
       sass: {

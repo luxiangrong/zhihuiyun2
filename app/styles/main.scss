@@ -70,6 +70,18 @@ html.full-screen {
     @include button-variant(#fff, #2b4786, #2b4786);
 }
 
+.bootstrap-dialog {
+    &.dialog-a {
+        .modal-dialog {
+            .modal-content {
+                .modal-header {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+
 //侧边栏菜单
 .side-nav-wrap {
     position: fixed;
@@ -240,7 +252,7 @@ html.full-screen {
             text-decoration: none;
             span {
                 position: relative;
-                top:5px;
+                top: 5px;
                 vertical-align: middle;
             }
             img {
@@ -328,7 +340,7 @@ html.full-screen {
             text-decoration: none;
             span {
                 position: relative;
-                top:5px;
+                top: 5px;
                 vertical-align: middle;
             }
             img {
@@ -873,6 +885,52 @@ html.full-screen {
                     padding-top: 14px;
                 }
             }
+        }
+    }
+}
+
+.topic-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    .dialog {
+        position: relative;
+        width: 80%;
+        @media (min-width: 320px) {
+            max-width: 320px;
+        }
+        margin: 15% auto;
+        border: 1px solid #cccccc;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b6a7b4+0,dcd4d9+100 */
+        background: #b6a7b4; /* Old browsers */
+        background: -moz-radial-gradient(center, ellipse cover,  #b6a7b4 0%, #dcd4d9 100%); /* FF3.6-15 */
+        background: -webkit-radial-gradient(center, ellipse cover,  #b6a7b4 0%,#dcd4d9 100%); /* Chrome10-25,Safari5.1-6 */
+        background: radial-gradient(ellipse at center,  #b6a7b4 0%,#dcd4d9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        .form-control {
+            border: none;
+            border-radius: 0px;
+            box-shadow: none;
+        }
+        .content {
+            textarea {
+                background-color: transparent;
+            }
+        }
+        .col-btn-l,
+        .col-btn-r {
+            .btn {
+                color: #ffffff;
+            }
+            padding: 0;
+            border-top: 1px solid #ddd;
+        }
+        .col-btn-l {
+            border-right: 1px solid #ddd;
         }
     }
 }
